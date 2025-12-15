@@ -2,8 +2,8 @@ import pandas as pd
 import joblib
 import streamlit as st
 
-model= joblib.load("course_model.pkl")
-encoder = joblib.load("course_encoder.pkl")
+model= joblib.load('course_model.pkl')
+encoder = joblib.load('course_encoder.pkl')
 
 hobby =st.text_input("enter your hobby:")
 passion =st.text_input("what are your passion about:")
@@ -32,3 +32,4 @@ if st.button("Recommend"):
     st.success(f"Recommended product: {make_recommendation}")
 
     
+
