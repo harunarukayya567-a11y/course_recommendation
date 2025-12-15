@@ -10,7 +10,7 @@ passion =st.text_input("what are your passion about:")
 technical_level =st.text_input("your technical level:")
 time_per_week =st.text_input("time you can spend weekly:")
 goal =st.text_input("what ia your main goal:")
-style =st.text_input("y our learning style:")
+learning_style =st.text_input("y our learning style:")
 
 if st.button("Recommend"):
     sample_data = pd.DataFrame({
@@ -19,7 +19,7 @@ if st.button("Recommend"):
      "technical_level":[technical_level],
      "time_per_week":[time_per_week],
      "goal":[goal],
-     "style":[style]    
+     "learning_style":[learning_style]    
     })
     sample_data['hobby'] = sample_data['hobby'].str.lower()
     sample_data['passion'] = sample_data['passion'].str.lower()
@@ -32,4 +32,5 @@ if st.button("Recommend"):
     st.success(f"Recommended product: {make_recommendation}")
 
     
+
 
